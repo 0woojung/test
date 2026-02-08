@@ -1,6 +1,6 @@
 {
     "name": "Java Tomcat Codespace",
-    "image": "mcr.microsoft.com/devcontainers/java:17",
+    "image": "mcr.microsoft.com/devcontainers/java:17-jdk",
     // "features": {
     //     "ghcr.io/devcontainers/features/maven:1": {}
     // },
@@ -12,11 +12,9 @@
         }
     },
     "postCreateCommand": [
-        "apt-get update"
-        //"sudo apt-get install -y maven wget",
         //"cd ~",
-        //"wget https://archive.apache.org/dist/tomcat/tomcat-9/v9.0.85/bin/apache-tomcat-9.0.85.tar.gz",
-        //"tar -xzf apache-tomcat-9.0.85.tar.gz",
-        //"chmod +x apache-tomcat-9.0.85/bin/*.sh"
+        "wget https://archive.apache.org/dist/tomcat/tomcat-9/v9.0.85/bin/apache-tomcat-9.0.85.tar.gz",
+        "tar -xzf apache-tomcat-9.0.85.tar.gz",
+        "chmod +x apache-tomcat-9.0.85/bin/*.sh"
     ]
 }
